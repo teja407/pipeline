@@ -3,7 +3,7 @@ pipeline {
         stages {
 	   stage('one'){
 	   	steps {
-	   		sh  "cd /var/lib/jenkins/workspace/hive-python/"
+	   		sh  "cd /var/lib/jenkins/workspace/Declarative-pipeline/"
 	   		sh   "python fileformat.py"
 	   		}
 		}
