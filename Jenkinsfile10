@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+        stages {
+            stage('One') {
+	          agent {
+        	        label "slave"
+    		          }
+           	 steps {
+            		echo 'hello'
+			          sh "hostname"
+            		}
+            		}
+            }
+    }
