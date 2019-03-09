@@ -13,7 +13,7 @@ pipeline {
         	        label "slave"
     		          }
            	 steps {
-            		echo 'hello'
+            			
 			          sh "hostname"
             		}
             		}
