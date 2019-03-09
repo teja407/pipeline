@@ -14,7 +14,18 @@ pipeline {
     		          }
            	 steps {
             			
-			          sh "hostname"
+			 sh "hostname"
+            		}
+            		}
+			
+			
+			
+	   stage('Three') {
+	          agent {
+        	        label "spark-slave"
+    		          }
+           	 steps {
+            		  sh "/usr/bin/hive -f sample.sql"
             		}
             		}
             }
