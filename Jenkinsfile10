@@ -2,10 +2,8 @@ pipeline {
     agent any
         stages {
 	   stage('one'){
-	   sh """
-	   	  cd /var/lib/jenkins/workspace/hive-python/
-	          python fileformat.py
-		"""
+	   sh  "cd /var/lib/jenkins/workspace/hive-python/"
+	   sh   "python fileformat.py"
 	   }
 	
             stage('Two') {
