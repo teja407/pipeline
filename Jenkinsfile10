@@ -1,7 +1,14 @@
 pipeline {
     agent any
         stages {
-            stage('One') {
+	   stage('one'){
+	   sh """
+	   	  cd /var/lib/jenkins/workspace/hive-python/
+	          python fileformat.py
+		"""
+	   }
+	
+            stage('Two') {
 	          agent {
         	        label "slave"
     		          }
